@@ -3,8 +3,7 @@
 // Нужно заменить FIXME на тип который достанет из Order все возможные состояния (state)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const enum ResultStatus { initial, inWork, buyingSupplies, producing, fullfilled }
-type FIXME = keyof typeof ResultStatus;
+type FIXME = Order["state"]
 
 type Order =
   | {

@@ -3,7 +3,10 @@
 // Нужно заменить FIXME на тип который вычисляется на освове OrderState
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type FIXME = string[];
+interface ResultStatus extends Array<string> {
+  [index: number] : 'initial' | 'inWork' | 'buyingSupplies' | 'producing' | 'fullfilled'
+};
+type FIXME = ResultStatus;
 
 const orderStates = [
   "initial",

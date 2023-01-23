@@ -3,12 +3,12 @@
 // Нужно заменить FIXME на соответствующий тип
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-interface Fix {
-  obj: number;
-  keyToOmit: string
+interface ObjectRecord {
+  obj: any,
+  keyToOmit: any
 }
- 
-type FIXME = Partial<Fix>;
+
+type FIXME = Omit<ObjectRecord, "obj" | "keyToOmit">;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const omit = <T extends Record<any, any>, K extends keyof T>(
